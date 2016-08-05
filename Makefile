@@ -12,6 +12,13 @@ insertion.o: $(SRC_DIR)/insertion.cpp
 	$(CC) $(OPTIONS) $(SRC_DIR)/insertion.cpp -c 
 	mv insertion.o obj/
 
+selection: directories selection.o
+	$(CC) $(OPTIONS) $(BUILD_DIR)/selection.o -o $(DIST_DIR)/selection
+
+selection.o: $(SRC_DIR)/selection.cpp
+	$(CC) $(OPTIONS) $(SRC_DIR)/selection.cpp -c
+	mv selection.o obj/
+
 directories: 
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(DIST_DIR)

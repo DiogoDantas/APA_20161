@@ -19,6 +19,13 @@ selection.o: $(SRC_DIR)/selection.cpp
 	$(CC) $(OPTIONS) $(SRC_DIR)/selection.cpp -c
 	mv selection.o obj/
 
+quick: directories quicksort.o
+	$(CC) $(OPTIONS) $(BUILD_DIR)/quicksort.o -o $(DIST_DIR)/quick
+
+quicksort.o: $(SRC_DIR)/quicksort.cpp
+	$(CC) $(OPTIONS) $(SRC_DIR)/quicksort.cpp -c
+	mv quicksort.o obj/
+
 directories: 
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(DIST_DIR)

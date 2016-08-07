@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
 		v_float.push_back(low + static_cast <float> (rand() / static_cast <float> (RAND_MAX / (high - low))));
 	}
 
-	// calling the selectionSort procedure
+	// calling the quickSort procedure
 	quickSort(v_int, 0, v_int.size() - 1);
 	quickSort(v_float, 0, v_float.size() - 1);
 	

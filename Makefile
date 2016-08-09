@@ -1,5 +1,5 @@
 CC = g++
-OPTIONS = -std=c++11 -Wall -Werror -g3 
+OPTIONS = -std=c++11 -Wall -Werror -O2 -g3 
 
 SRC_DIR = src
 BUILD_DIR = obj

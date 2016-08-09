@@ -39,45 +39,23 @@ inline void insertionSort(std::vector<T> &unordered_vector){
 
 int main(int argc, char const *argv[])
 {
-	std::vector<int> v_int;
-	std::vector<float> v_float;
-	float low = 0.0f, high = 100.0f;
-	srand(time(NULL)); // Seed
+	std::vector<int> input;
+ 	int count = 0, tmp = 0, input_size;
 
+ 	std::cin >> input_size;
 
-	/**
-	 * filling the vector of integers
-	 */
-	for (int i = 0; i < 10; ++i)
-	{
-		v_int.push_back(rand() % 100);
-	}
+ 	while(count < input_size) {
+ 		std::cin >> tmp;
+ 		input.push_back(tmp);
+ 		++count;
+ 	}
 
-	/**
-	 * filling the vector of floating
-	 */
-	for (int i = 0; i < 5; ++i)
-	{
-		v_float.push_back(low + static_cast <float> (rand() / static_cast <float> (RAND_MAX / (high - low))));
-	}
+ 	insertionSort(input);
 
-	// calling the insertionSort procedure
-	insertionSort(v_int);
-	insertionSort(v_float);
-
-
-	for(std::vector<int>::iterator it = v_int.begin(); it != v_int.end(); ++it){
-		std::cout << *it << " ";
-	}
-
-
-	std::cout << std::endl;
-
-	for(std::vector<float>::iterator it = v_float.begin(); it != v_float.end(); ++it){
-		std::cout << *it << " ";
-	}
-
-	std::cout << std::endl;
+ 	for (std::vector<int>::iterator it = input.begin(); it != input.end(); ++it)
+ 	{
+ 		std::cout << *it << std::endl;
+ 	}
 
 	return 0;
 }

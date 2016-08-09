@@ -6,15 +6,15 @@
 
 /**
  * @name 			insertionSort
- * @parameter 		std::vector<T> & 
+ * @parameter 		std::vector<T> &
  * @return 			void
  *
  * @author 			Diogo Dantas
  *
- * implementation of classic sort algorithm called insertion sort. 
+ * implementation of classic sort algorithm called insertion sort.
  */
 
-template <typename T> 
+template <typename T>
 inline void insertionSort(std::vector<T> &unordered_vector){
 
 	int i = 0 ;
@@ -70,15 +70,14 @@ int main(int argc, char const *argv[])
 		std::cout << *it << " ";
 	}
 
-	
-	std::cout << std::endl; 
+
+	std::cout << std::endl;
 
 	for(std::vector<float>::iterator it = v_float.begin(); it != v_float.end(); ++it){
 		std::cout << *it << " ";
 	}
 
 	std::cout << std::endl;
-	
+
 	return 0;
 }
-

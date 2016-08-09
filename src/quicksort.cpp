@@ -6,22 +6,19 @@
 
 /**
  * @name 			quickSort
- * @parameter 		std::vector<T> &, const int begin, const int end 
+ * @parameter 		std::vector<T> &, const int begin, const int end
  * @return 			void
  *
  * @author 			Diogo Dantas
  *
  * Implementation of classic sort algorithm called quick sort.
- * The pivot is always chosen as the last element of the vector. 
+ * The pivot is always chosen as the last element of the vector.
  */
 
 template<typename T>
 void quickSort(std::vector<T> &unordered_vector ,const int begin, const int end)
 {
-	T pivot = end; 
-
-	std::swap(unordered_vector[pivot], unordered_vector[end]);
-	pivot = end;
+	T pivot = end;
 
 	int i = begin;
 	int j = end-1;
@@ -75,20 +72,20 @@ int main(int argc, char const *argv[])
 	// calling the quickSort procedure
 	quickSort(v_int, 0, v_int.size() - 1);
 	quickSort(v_float, 0, v_float.size() - 1);
-	
-	//Output 	
+
+	//Output
 	for(std::vector<int>::iterator it = v_int.begin(); it != v_int.end(); ++it){
 		std::cout << *it << " ";
 	}
 
-	
-	std::cout << std::endl; 
+
+	std::cout << std::endl;
 
 	for(std::vector<float>::iterator it = v_float.begin(); it != v_float.end(); ++it){
 		std::cout << *it << " ";
 	}
 
 	std::cout << std::endl;
-	
+
 	return 0;
 }

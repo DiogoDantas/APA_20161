@@ -26,6 +26,13 @@ quicksort.o: $(SRC_DIR)/quicksort.cpp
 	$(CC) $(OPTIONS) $(SRC_DIR)/quicksort.cpp -c
 	mv quicksort.o obj/
 
+merge: directories mergesort.o
+	$(CC) $(OPTIONS) $(BUILD_DIR)/mergesort.o -o $(DIST_DIR)/merge
+
+mergesort.o: $(SRC_DIR)/mergesort.cpp
+	$(CC) $(OPTIONS) $(SRC_DIR)/mergesort.cpp -c
+	mv mergesort.o obj/
+
 directories: 
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(DIST_DIR)
@@ -35,6 +42,8 @@ directories:
 clean: 
 	rm -f $(BUILD_DIR)/*.o
 	rm -f $(DIST_DIR)/*
+	rm -f -d $(BUILD_DIR)
+	rm -f -d $(DIST_DIR)
 
 
 	

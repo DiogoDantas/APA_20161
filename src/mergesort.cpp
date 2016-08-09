@@ -2,14 +2,10 @@
 #include <vector>
 #include <ctime>
 #include <random>
-#include <algorithm>
 
 /**
- * @name 			merge
- * @parameter 		std::vector<T> &, const int begin, const int middle, const int end 
- * @return 			void
- *
  * @author 			Diogo Dantas
+ * @Date 			08/08/2016
  *
  * Implementation of classic sort algorithm called mergeSort.
  */
@@ -61,15 +57,6 @@ void merge(std::vector<T> &unordered_vector, const int begin, const int middle, 
 }
 
 
-/**
- * @name 			mergeSort
- * @parameter 		std::vector<T> &, const int begin, const int end 
- * @return 			void
- *
- * @author 			Diogo Dantas
- *
- * Implementation of classic sort algorithm called mergeSort.
- */
 template<typename T>
 void mergeSort(std::vector<T> &unordered_vector, const int begin, const int end){
 	if(begin < end){

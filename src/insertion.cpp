@@ -13,6 +13,7 @@
  *
  * implementation of classic sort algorithm called insertion sort. 
  */
+
 template <typename T> 
 inline void insertionSort(std::vector<T> &unordered_vector){
 

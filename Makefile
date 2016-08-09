@@ -33,6 +33,13 @@ mergesort.o: $(SRC_DIR)/mergesort.cpp
 	$(CC) $(OPTIONS) $(SRC_DIR)/mergesort.cpp -c
 	mv mergesort.o obj/
 
+heap: directories heapsort.o
+	$(CC) $(OPTIONS) $(BUILD_DIR)/heapsort.o -o $(DIST_DIR)/heap
+
+heapsort.o: $(SRC_DIR)/heapsort.cpp
+	$(CC) $(OPTIONS) $(SRC_DIR)/heapsort.cpp -c
+	mv heapsort.o obj/
+
 directories: 
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(DIST_DIR)
